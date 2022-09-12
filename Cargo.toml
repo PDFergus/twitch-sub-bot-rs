@@ -1,0 +1,17 @@
+[package]
+name = "twitch_irc"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+twitch-irc = "4.0.0"
+tokio = {version = "1", features = ["full"]}
+mini-redis = "0.4"
+winconsole = "0.11"
+winput = "0.2.5"
+rodio = "0.15.0"
+futures = "0.3.24"
+user32-sys = "0.1.2"
+winapi = { version = "0.3", features = ["winuser"] }

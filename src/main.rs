@@ -22,7 +22,7 @@ pub async fn main() {
     let config = ClientConfig::default();
     let (mut incoming_messages, client) =
         TwitchIRCClient::<SecureTCPTransport, StaticLoginCredentials>::new(config);
-
+//joins with anon credentials
     let join_handle = tokio::spawn(async move {
         while let Some(message) = incoming_messages.recv().await {
             match message{
@@ -86,7 +86,7 @@ pub async fn main() {
         }
     });
 
-    client.join("whoopsitspete".to_owned()).unwrap();
+    client.join("channelnamehere".to_owned()).unwrap();//change the string to channel of choice
 
     // keep the tokio executor alive.
     join_handle.await.unwrap();

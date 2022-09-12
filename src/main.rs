@@ -105,19 +105,19 @@ async fn play_yell(){
     sink.sleep_until_end();
 }
 
-async fn play_sound(word: String){
+//async fn play_sound(word: String){
 
-    sleep(time::Duration::from_millis(10)).await;
-    let (_stream, stream_handle) = OutputStream::try_default().unwrap();
-    let sink = Sink::try_new(&stream_handle).unwrap();
-    let file = BufReader::new(File::open("sounds/angryscav.mp3").unwrap());
-    let source= Decoder::new(file).unwrap();
+  //  sleep(time::Duration::from_millis(10)).await;
+    //let (_stream, stream_handle) = OutputStream::try_default().unwrap();
+    //let sink = Sink::try_new(&stream_handle).unwrap();
+    //let file = BufReader::new(File::open("sounds/angryscav.mp3").unwrap());
+    //let source= Decoder::new(file).unwrap();
     //stream_handle.play_raw(source.convert_samples());
     
-    sink.append(source);
-    
-    sink.sleep_until_end();
-}
+    //sink.append(source);
+    //
+    //sink.sleep_until_end();
+//}
 
 
 async fn desktop_view(){
